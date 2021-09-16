@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_URI} !^/sns_training/index.php$
+    RewriteCond %{REQUEST_URI} !^.*\.(gif|jpg|jpeg|png|swf|css|js|json)$ [NC]
+    RewriteRule ^(.*)$ sns_training/index.php
+</IfModule>
