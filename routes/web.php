@@ -4,6 +4,7 @@ use Routes\route;
 
 $router = new route();
 
+
 //@ホーム画面
 $router->call('home','homeController@index');//初期表示
 
