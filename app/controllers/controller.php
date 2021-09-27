@@ -10,13 +10,13 @@ class controller {
         ];
     }
 
-    function View($request,$model = null){
+    protected function View($request,$model = null){
         $this->MODEL = $model;
         $model = null;
         include __DIR__.'/../../views/pages/'.$request.'.php';
    }
 
-   function Json($data){
+   protected function Json($data){
        echo json_encode($data);
     }
 }
