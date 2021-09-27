@@ -6,5 +6,10 @@ class registController extends controller{
         $model = null; 
         $this->View("regist",$model);
     }
+
+    //会員登録
+    public function registPost($request){
+        $this->Json($request);
+    }
 }
 ?>
