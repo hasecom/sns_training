@@ -1,7 +1,6 @@
 <?php
 namespace App\Services;
-
-use API\Connection\api;
+use Api\Connection\api;
 use App\Utill\formatRtnValue;
 
 class service
