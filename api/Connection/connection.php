@@ -31,8 +31,7 @@ class Connection{
                 }
             }
             $flag = $sth->execute();
-            
-            if(mb_strstr( $sql, ' ', true) != 'SELECT'){
+            if(trim((mb_strstr( $sql,' ', true)),"\n") != 'SELECT'){
                 $result = $flag;
             }else{
                 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
