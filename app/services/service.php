@@ -1,7 +1,6 @@
 <?php
 namespace App\Services;
 use Api\Connection\api;
-use App\Utill\formatRtnValue;
 
 class service
 {
@@ -26,7 +25,7 @@ class service
     return (new api)->$func($this->MODEL);
   }
 
-  public function callRtnHandle($obj, $msg, $code){
-    return (new formatRtnValue)->returnHandle($obj, $msg, $code);
+  public function callRtnHandle($obj, $msg=null, $code=1){
+    return ["RESULT"=>$obj,"MESSAGE"=>$msg,"CODE"=>$code];
   }
 }

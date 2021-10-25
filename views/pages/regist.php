@@ -4,7 +4,6 @@
 <head>
   <?php require_once(__DIR__ . "/../components/head.php"); ?>
 </head>
-
 <body>
   <div id="app px-4">
     <div class="row mx-0">
@@ -44,9 +43,12 @@
             data: $(this).serializeArray(),
             timeout: 5000,
         }).done(function(data){
-            console.table(data);
+          if(data['CODE'] != 1){
+            alert(data['MESSAGE']);
+          }
+            
         }).fail(function(){
-            alert('認証に失敗しました。内部エラーです。');
+            alert('内部エラーです。');
         });
     });
     </script>

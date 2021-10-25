@@ -18,6 +18,7 @@ class controller {
 
    protected function Json($data){
        echo json_encode($data);
+       die;
     }
 }
 ?>

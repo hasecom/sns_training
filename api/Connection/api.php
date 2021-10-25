@@ -13,6 +13,6 @@ WHERE
     USR.USER_ID = :USER_ID;
 EOM;
     $connection =  new Connection();
-    return $connection->con($sql, $param)[0];
+    return $connection->con($sql, $param);
   }
 }
