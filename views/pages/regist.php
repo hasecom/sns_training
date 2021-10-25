@@ -45,8 +45,9 @@
         }).done(function(data){
           if(data['CODE'] != 1){
             alert(data['MESSAGE']);
+          }else{
+            location.href="./home";
           }
-            
         }).fail(function(){
             alert('内部エラーです。');
         });

@@ -24,15 +24,16 @@ class registController extends controller{
         $model = $userExistsObj;
         $this->Json($model);
       }
-      
+
       $registUserService = new registUserService;
-      $registUserService->request([
+      $registUserObj = $registUserService->request([
         'USER_ID'=>$request['userId'],
         'USER_NAME'=>$request['userName'],
         'USER_PASS'=>$request['userPassWord'],
       ]);
 
-      $this->Json($request);
+      $model = $registUserObj;
+      $this->Json($model);
     }
 }
 ?>
